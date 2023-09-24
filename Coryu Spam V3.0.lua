@@ -1,0 +1,392 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Screen = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local ExitButton = Instance.new("TextButton")
+local MiscButton = Instance.new("TextButton")
+local MiscFrame = Instance.new("Frame")
+local FloatButton = Instance.new("TextButton")
+local DockButton = Instance.new("TextButton")
+local MinifyButton = Instance.new("TextButton")
+local CloseButton = Instance.new("TextButton")
+local InfoTab = Instance.new("TextLabel")
+local HelpButton = Instance.new("TextButton")
+local HelpFrame = Instance.new("Frame")
+local Label1 = Instance.new("TextLabel")
+local Label2 = Instance.new("TextLabel")
+local Label3 = Instance.new("TextLabel")
+local Label4 = Instance.new("TextLabel")
+local CloseHelpButton = Instance.new("TextButton")
+local SpamLabel = Instance.new("TextLabel")
+local SpamBox = Instance.new("TextBox")
+local DelayLabel = Instance.new("TextLabel")
+local DelayBox = Instance.new("TextBox")
+local AnnoyLabel = Instance.new("TextLabel")
+local AnnoyBox = Instance.new("TextBox")
+local ChatLabel = Instance.new("TextLabel")
+local IgnoreFrameChat = Instance.new("Frame")
+local ChatButton = Instance.new("TextButton")
+local ViewLabel = Instance.new("TextLabel")
+local IgnoreFrameView = Instance.new("Frame")
+local ViewButton = Instance.new("TextButton")
+local ComfirmButton = Instance.new("TextButton")
+
+--Properties:
+
+Screen.Name = "Screen"
+Screen.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Screen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = Screen
+MainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+MainFrame.BorderColor3 = Color3.fromRGB(20, 20, 20)
+MainFrame.Position = UDim2.new(0.044952102, 0, 0.708641946, 0)
+MainFrame.Size = UDim2.new(0, 454, 0, 194)
+
+Title.Name = "Title"
+Title.Parent = MainFrame
+Title.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Title.BorderColor3 = Color3.fromRGB(20, 20, 20)
+Title.Size = UDim2.new(0, 454, 0, 18)
+Title.Font = Enum.Font.Code
+Title.Text = "Coryu Spam V3.0"
+Title.TextColor3 = Color3.fromRGB(255, 0, 127)
+Title.TextSize = 14.000
+
+ExitButton.Name = "ExitButton"
+ExitButton.Parent = Title
+ExitButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExitButton.BackgroundTransparency = 1.000
+ExitButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExitButton.BorderSizePixel = 0
+ExitButton.Position = UDim2.new(0.958149791, 0, 0, 0)
+ExitButton.Size = UDim2.new(0, 19, 0, 18)
+ExitButton.Font = Enum.Font.Code
+ExitButton.Text = "X"
+ExitButton.TextColor3 = Color3.fromRGB(255, 0, 127)
+ExitButton.TextSize = 14.000
+
+MiscButton.Name = "MiscButton"
+MiscButton.Parent = Title
+MiscButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MiscButton.BackgroundTransparency = 1.000
+MiscButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MiscButton.BorderSizePixel = 0
+MiscButton.Position = UDim2.new(0.916299582, 0, 0, 0)
+MiscButton.Size = UDim2.new(0, 19, 0, 18)
+MiscButton.Font = Enum.Font.Code
+MiscButton.Text = "V"
+MiscButton.TextColor3 = Color3.fromRGB(255, 0, 127)
+MiscButton.TextSize = 14.000
+
+MiscFrame.Name = "MiscFrame"
+MiscFrame.Parent = MiscButton
+MiscFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+MiscFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MiscFrame.Position = UDim2.new(0, 0, 1, 0)
+MiscFrame.Size = UDim2.new(0, 71, 0, 70)
+MiscFrame.Visible = false
+
+FloatButton.Name = "FloatButton"
+FloatButton.Parent = MiscFrame
+FloatButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+FloatButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FloatButton.Size = UDim2.new(0, 71, 0, 17)
+FloatButton.Font = Enum.Font.Code
+FloatButton.Text = "Float"
+FloatButton.TextColor3 = Color3.fromRGB(255, 0, 127)
+FloatButton.TextSize = 14.000
+
+DockButton.Name = "DockButton"
+DockButton.Parent = MiscFrame
+DockButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+DockButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DockButton.Position = UDim2.new(0, 0, 0.246955425, 0)
+DockButton.Size = UDim2.new(0, 71, 0, 17)
+DockButton.Font = Enum.Font.Code
+DockButton.Text = "Dock"
+DockButton.TextColor3 = Color3.fromRGB(255, 0, 127)
+DockButton.TextSize = 14.000
+
+MinifyButton.Name = "MinifyButton"
+MinifyButton.Parent = MiscFrame
+MinifyButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+MinifyButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MinifyButton.Position = UDim2.new(0, 0, 0.493910849, 0)
+MinifyButton.Size = UDim2.new(0, 71, 0, 17)
+MinifyButton.Font = Enum.Font.Code
+MinifyButton.Text = "Minify"
+MinifyButton.TextColor3 = Color3.fromRGB(255, 0, 127)
+MinifyButton.TextSize = 14.000
+
+CloseButton.Name = "CloseButton"
+CloseButton.Parent = MiscFrame
+CloseButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+CloseButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CloseButton.Position = UDim2.new(0, 0, 0.747006595, 0)
+CloseButton.Size = UDim2.new(0, 71, 0, 17)
+CloseButton.Font = Enum.Font.Code
+CloseButton.Text = "Close"
+CloseButton.TextColor3 = Color3.fromRGB(255, 0, 127)
+CloseButton.TextSize = 14.000
+
+InfoTab.Name = "InfoTab"
+InfoTab.Parent = MainFrame
+InfoTab.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+InfoTab.BorderColor3 = Color3.fromRGB(20, 20, 20)
+InfoTab.Position = UDim2.new(0, 0, 0.0927835032, 0)
+InfoTab.Size = UDim2.new(0, 454, 0, 18)
+InfoTab.Font = Enum.Font.Code
+InfoTab.Text = " Info"
+InfoTab.TextColor3 = Color3.fromRGB(255, 0, 127)
+InfoTab.TextSize = 14.000
+InfoTab.TextXAlignment = Enum.TextXAlignment.Left
+
+HelpButton.Name = "HelpButton"
+HelpButton.Parent = InfoTab
+HelpButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HelpButton.BackgroundTransparency = 1.000
+HelpButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HelpButton.BorderSizePixel = 0
+HelpButton.Position = UDim2.new(0.958149791, 0, 0, 0)
+HelpButton.Size = UDim2.new(0, 19, 0, 18)
+HelpButton.Font = Enum.Font.Code
+HelpButton.Text = "X"
+HelpButton.TextColor3 = Color3.fromRGB(255, 0, 127)
+HelpButton.TextSize = 14.000
+
+HelpFrame.Name = "HelpFrame"
+HelpFrame.Parent = HelpButton
+HelpFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+HelpFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HelpFrame.BorderSizePixel = 0
+HelpFrame.Position = UDim2.new(-22.8947372, 0, 0, 0)
+HelpFrame.Size = UDim2.new(0, 454, 0, 176)
+HelpFrame.Visible = false
+
+Label1.Name = "Label1"
+Label1.Parent = HelpFrame
+Label1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label1.BackgroundTransparency = 1.000
+Label1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Label1.BorderSizePixel = 0
+Label1.Position = UDim2.new(0.279735684, 0, 0, 0)
+Label1.Size = UDim2.new(0, 200, 0, 30)
+Label1.Font = Enum.Font.Code
+Label1.Text = "Help"
+Label1.TextColor3 = Color3.fromRGB(255, 0, 127)
+Label1.TextSize = 20.000
+
+Label2.Name = "Label2"
+Label2.Parent = HelpFrame
+Label2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label2.BackgroundTransparency = 1.000
+Label2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Label2.BorderSizePixel = 0
+Label2.Position = UDim2.new(0, 0, 0.170454547, 0)
+Label2.Size = UDim2.new(0, 454, 0, 30)
+Label2.Font = Enum.Font.Code
+Label2.Text = " 1. Enter your message you want to spam"
+Label2.TextColor3 = Color3.fromRGB(255, 0, 127)
+Label2.TextSize = 16.000
+Label2.TextXAlignment = Enum.TextXAlignment.Left
+
+Label3.Name = "Label3"
+Label3.Parent = HelpFrame
+Label3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label3.BackgroundTransparency = 1.000
+Label3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Label3.BorderSizePixel = 0
+Label3.Position = UDim2.new(0, 0, 0.340909094, 0)
+Label3.Size = UDim2.new(0, 454, 0, 30)
+Label3.Font = Enum.Font.Code
+Label3.Text = " 2. You can change the speed of spam"
+Label3.TextColor3 = Color3.fromRGB(255, 0, 127)
+Label3.TextSize = 16.000
+Label3.TextXAlignment = Enum.TextXAlignment.Left
+
+Label4.Name = "Label4"
+Label4.Parent = HelpFrame
+Label4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label4.BackgroundTransparency = 1.000
+Label4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Label4.BorderSizePixel = 0
+Label4.Position = UDim2.new(0, 0, 0.511363626, 0)
+Label4.Size = UDim2.new(0, 454, 0, 30)
+Label4.Font = Enum.Font.Code
+Label4.Text = " 3. Click 'Comfirm'"
+Label4.TextColor3 = Color3.fromRGB(255, 0, 127)
+Label4.TextSize = 16.000
+Label4.TextXAlignment = Enum.TextXAlignment.Left
+
+CloseHelpButton.Name = "CloseHelpButton"
+CloseHelpButton.Parent = HelpFrame
+CloseHelpButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+CloseHelpButton.BorderColor3 = Color3.fromRGB(20, 20, 20)
+CloseHelpButton.Position = UDim2.new(0.279735684, 0, 0.784090936, 0)
+CloseHelpButton.Size = UDim2.new(0, 200, 0, 25)
+CloseHelpButton.Font = Enum.Font.Code
+CloseHelpButton.Text = "Close"
+CloseHelpButton.TextColor3 = Color3.fromRGB(255, 0, 127)
+CloseHelpButton.TextSize = 14.000
+
+SpamLabel.Name = "SpamLabel"
+SpamLabel.Parent = MainFrame
+SpamLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SpamLabel.BorderColor3 = Color3.fromRGB(15, 15, 15)
+SpamLabel.Position = UDim2.new(0, 0, 0.185567006, 0)
+SpamLabel.Size = UDim2.new(0, 130, 0, 23)
+SpamLabel.ZIndex = 2
+SpamLabel.Font = Enum.Font.Code
+SpamLabel.Text = " Spam"
+SpamLabel.TextColor3 = Color3.fromRGB(255, 0, 127)
+SpamLabel.TextSize = 12.000
+SpamLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+SpamBox.Name = "SpamBox"
+SpamBox.Parent = SpamLabel
+SpamBox.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SpamBox.BorderColor3 = Color3.fromRGB(15, 15, 15)
+SpamBox.Position = UDim2.new(1, 0, 0, 0)
+SpamBox.Size = UDim2.new(0, 324, 0, 23)
+SpamBox.Font = Enum.Font.Code
+SpamBox.PlaceholderColor3 = Color3.fromRGB(255, 0, 127)
+SpamBox.PlaceholderText = "ㅤSpam Message Here!"
+SpamBox.Text = ""
+SpamBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpamBox.TextSize = 12.000
+SpamBox.TextXAlignment = Enum.TextXAlignment.Left
+
+DelayLabel.Name = "DelayLabel"
+DelayLabel.Parent = MainFrame
+DelayLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+DelayLabel.BorderColor3 = Color3.fromRGB(15, 15, 15)
+DelayLabel.Position = UDim2.new(0, 0, 0.3041237, 0)
+DelayLabel.Size = UDim2.new(0, 130, 0, 23)
+DelayLabel.ZIndex = 2
+DelayLabel.Font = Enum.Font.Code
+DelayLabel.Text = " Delay"
+DelayLabel.TextColor3 = Color3.fromRGB(255, 0, 127)
+DelayLabel.TextSize = 12.000
+DelayLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+DelayBox.Name = "DelayBox"
+DelayBox.Parent = DelayLabel
+DelayBox.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+DelayBox.BorderColor3 = Color3.fromRGB(15, 15, 15)
+DelayBox.Position = UDim2.new(1, 0, 0, 0)
+DelayBox.Size = UDim2.new(0, 324, 0, 23)
+DelayBox.Font = Enum.Font.Code
+DelayBox.PlaceholderColor3 = Color3.fromRGB(255, 0, 127)
+DelayBox.PlaceholderText = "ㅤ1"
+DelayBox.Text = ""
+DelayBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+DelayBox.TextSize = 14.000
+DelayBox.TextXAlignment = Enum.TextXAlignment.Left
+
+AnnoyLabel.Name = "AnnoyLabel"
+AnnoyLabel.Parent = MainFrame
+AnnoyLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+AnnoyLabel.BorderColor3 = Color3.fromRGB(15, 15, 15)
+AnnoyLabel.Position = UDim2.new(0, 0, 0.422680408, 0)
+AnnoyLabel.Size = UDim2.new(0, 130, 0, 23)
+AnnoyLabel.ZIndex = 2
+AnnoyLabel.Font = Enum.Font.Code
+AnnoyLabel.Text = " Annoy Target"
+AnnoyLabel.TextColor3 = Color3.fromRGB(255, 0, 127)
+AnnoyLabel.TextSize = 12.000
+AnnoyLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+AnnoyBox.Name = "AnnoyBox"
+AnnoyBox.Parent = AnnoyLabel
+AnnoyBox.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+AnnoyBox.BorderColor3 = Color3.fromRGB(15, 15, 15)
+AnnoyBox.Position = UDim2.new(1, 0, 0, 0)
+AnnoyBox.Size = UDim2.new(0, 324, 0, 23)
+AnnoyBox.Font = Enum.Font.Code
+AnnoyBox.PlaceholderColor3 = Color3.fromRGB(255, 0, 127)
+AnnoyBox.PlaceholderText = "ㅤEnter Player Display Name"
+AnnoyBox.Text = ""
+AnnoyBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+AnnoyBox.TextSize = 14.000
+AnnoyBox.TextXAlignment = Enum.TextXAlignment.Left
+
+ChatLabel.Name = "ChatLabel"
+ChatLabel.Parent = MainFrame
+ChatLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ChatLabel.BorderColor3 = Color3.fromRGB(15, 15, 15)
+ChatLabel.Position = UDim2.new(0, 0, 0.541237116, 0)
+ChatLabel.Size = UDim2.new(0, 130, 0, 23)
+ChatLabel.ZIndex = 2
+ChatLabel.Font = Enum.Font.Code
+ChatLabel.Text = " Chat"
+ChatLabel.TextColor3 = Color3.fromRGB(255, 0, 127)
+ChatLabel.TextSize = 12.000
+ChatLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+IgnoreFrameChat.Name = "IgnoreFrameChat"
+IgnoreFrameChat.Parent = ChatLabel
+IgnoreFrameChat.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+IgnoreFrameChat.BorderColor3 = Color3.fromRGB(15, 15, 15)
+IgnoreFrameChat.Position = UDim2.new(1, 0, 0, 0)
+IgnoreFrameChat.Size = UDim2.new(0, 324, 0, 23)
+
+ChatButton.Name = "ChatButton"
+ChatButton.Parent = IgnoreFrameChat
+ChatButton.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+ChatButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ChatButton.BorderSizePixel = 0
+ChatButton.Position = UDim2.new(0.0189999994, 0, 0.189999998, 0)
+ChatButton.Size = UDim2.new(0, 15, 0, 15)
+ChatButton.Font = Enum.Font.Code
+ChatButton.Text = ""
+ChatButton.TextColor3 = Color3.fromRGB(255, 0, 127)
+ChatButton.TextSize = 14.000
+
+ViewLabel.Name = "ViewLabel"
+ViewLabel.Parent = MainFrame
+ViewLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ViewLabel.BorderColor3 = Color3.fromRGB(15, 15, 15)
+ViewLabel.Position = UDim2.new(0, 0, 0.659793794, 0)
+ViewLabel.Size = UDim2.new(0, 130, 0, 23)
+ViewLabel.ZIndex = 2
+ViewLabel.Font = Enum.Font.Code
+ViewLabel.Text = " View"
+ViewLabel.TextColor3 = Color3.fromRGB(255, 0, 127)
+ViewLabel.TextSize = 12.000
+ViewLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+IgnoreFrameView.Name = "IgnoreFrameView"
+IgnoreFrameView.Parent = ViewLabel
+IgnoreFrameView.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+IgnoreFrameView.BorderColor3 = Color3.fromRGB(15, 15, 15)
+IgnoreFrameView.Position = UDim2.new(1, 0, 0, 0)
+IgnoreFrameView.Size = UDim2.new(0, 324, 0, 23)
+
+ViewButton.Name = "ViewButton"
+ViewButton.Parent = IgnoreFrameView
+ViewButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ViewButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ViewButton.BorderSizePixel = 0
+ViewButton.Position = UDim2.new(0.0189999994, 0, 0.189999998, 0)
+ViewButton.Size = UDim2.new(0, 15, 0, 15)
+ViewButton.Font = Enum.Font.Code
+ViewButton.Text = ""
+ViewButton.TextColor3 = Color3.fromRGB(255, 0, 127)
+ViewButton.TextSize = 14.000
+
+ComfirmButton.Name = "ComfirmButton"
+ComfirmButton.Parent = MainFrame
+ComfirmButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ComfirmButton.BorderColor3 = Color3.fromRGB(15, 15, 15)
+ComfirmButton.Position = UDim2.new(0.279735684, 0, 0.824742258, 0)
+ComfirmButton.Size = UDim2.new(0, 200, 0, 24)
+ComfirmButton.Font = Enum.Font.Code
+ComfirmButton.Text = "Comfirm"
+ComfirmButton.TextColor3 = Color3.fromRGB(255, 0, 127)
+ComfirmButton.TextSize = 18.000
